@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase E-Commerce Website</title>
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+/* GLOBAL */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fa;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    background:#0f172a;
+
+    padding:20px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+}
+
+.logo{
+
+    color:#38bdf8;
+
+    font-size:35px;
+
+    font-weight:700;
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
+}
+
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+
+    color:#38bdf8;
+}
+
+.icons i{
+
+    color:white;
+
+    font-size:20px;
+
+    margin-left:20px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.icons i:hover{
+
+    color:#38bdf8;
+}
+
+/* HERO SECTION */
+
+.hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('images/banner1.jpeg');
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:left;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.hero-content h1{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+}
+
+.hero-content p{
+
+    font-size:22px;
+
+    margin-bottom:30px;
+}
+
+.hero-content button{
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#38bdf8;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.hero-content button:hover{
+
+    background:#0284c7;
+
+    transform:scale(1.05);
+}
+
+/* OPTIONS */
+
+.options{
+
+    margin-top:30px;
+
+    display:none;
+
+    animation:fade 0.5s ease;
+}
+
+.option-btn{
+
+    padding:12px 25px;
+
+    margin:10px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:white;
+
+    color:#0f172a;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.option-btn:hover{
+
+    background:#38bdf8;
+
+    color:white;
+}
+
+/* COMMON SECTION */
+
+.next-section{
+
+    display:none;
+
+    padding:90px 8%;
+
+    animation:fade 0.5s ease;
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:50px;
+
+    color:#0f172a;
+}
+
+/* PRODUCT CARDS */
+
+.product-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+}
+
+.product-card{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+    transition:0.3s;
+}
+
+.product-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.product-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+}
+
+.product-card h3{
+
+    margin-top:20px;
+
+    font-size:24px;
+}
+
+.product-card p{
+
+    color:#0284c7;
+
+    font-size:20px;
+
+    margin:15px 0;
+}
+
+.product-card button{
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#0f172a;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.product-card button:hover{
+
+    background:#38bdf8;
+}
+
+/* FEATURES */
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+}
+
+.feature-box{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.feature-box i{
+
+    font-size:50px;
+
+    color:#38bdf8;
+
+    margin-bottom:20px;
+}
+
+.feature-box h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+}
+
+/* ABOUT */
+
+.about-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:20px;
+}
+
+.about-content h3{
+
+    font-size:40px;
+
+    margin-bottom:20px;
+}
+
+.about-content p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+}
+
+/* REVIEW */
+
+.review-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+}
+
+.review-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+    transition:0.3s;
+}
+
+.review-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.review-card img{
+
+    width:100px;
+
+    height:100px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin-bottom:20px;
+}
+
+.review-card h3{
+
+    margin-bottom:15px;
+}
+
+/* CONTACT */
+
+form{
+
+    max-width:600px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+form input,
+form textarea{
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+
+    font-size:16px;
+}
+
+form textarea{
+
+    height:150px;
+}
+
+form button{
+
+    padding:15px;
+
+    border:none;
+
+    background:#38bdf8;
+
+    color:white;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+
+    background:#020617;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    font-size:18px;
+}
+
+/* TOP BUTTON */
+
+#topBtn{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#38bdf8;
+
+    color:white;
+
+    cursor:pointer;
+
+    display:none;
+
+    font-size:18px;
+}
+
+/* ANIMATION */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+    }
+
+    .nav-links{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .hero-content h1{
+
+        font-size:45px;
+    }
+
+    .hero-content p{
+
+        font-size:18px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">ShopEase</div>
+
+    <ul class="nav-links">
+
+        <li><a href="#home">Home</a></li>
+
+        <li><a href="#productsSection">Products</a></li>
+
+        <li><a href="#aboutSection">About</a></li>
+
+        <li><a href="#contactSection">Contact</a></li>
+
+    </ul>
+
+    <div class="icons">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>Elevate Your Style</h1>
+
+        <p>
+            Premium shopping experience with fashion, watches and electronics.
+        </p>
+
+        <button onclick="showOptions()">
+
+            Shop Now
+
+        </button>
+
+        <!-- OPTIONS -->
+
+        <div class="options" id="optionsBox">
+
+            <button class="option-btn"
+            onclick="showSection('productsSection')">
+
+                Products
+
+            </button>
+
+            <button class="option-btn"
+            onclick="showSection('aboutSection')">
+
+                About Us
+
+            </button>
+
+            <button class="option-btn"
+            onclick="showSection('reviewSection')">
+
+                Reviews
+
+            </button>
+
+            <button class="option-btn"
+            onclick="showSection('contactSection')">
+
+                Contact
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section id="productsSection" class="next-section">
+
+    <h2 class="section-title">
+        Latest Products
+    </h2>
+
+    <div class="product-container">
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+            <img src="images/shoe1.jpeg" alt="">
+
+            <h3>Running Shoes</h3>
+
+            <p>$99</p>
+
+            <button onclick="showSection('checkoutSection')">
+
+                Buy Now
+
+            </button>
+
+        </div>
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+            <img src="images/watch.jpeg" alt="">
+
+            <h3>Smart Watch</h3>
+
+            <p>$149</p>
+
+            <button onclick="showSection('checkoutSection')">
+
+                Buy Now
+
+            </button>
+
+        </div>
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+            <img src="images/laptop.jpeg" alt="">
+
+            <h3>Gaming Laptop</h3>
+
+            <p>$899</p>
+
+            <button onclick="showSection('checkoutSection')">
+
+                Buy Now
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="next-section" id="featureSection" style="display:block;">
+
+    <h2 class="section-title">
+        Our Features
+    </h2>
+
+    <div class="features">
+
+        <div class="feature-box">
+
+            <i class="fa-solid fa-truck-fast"></i>
+
+            <h3>Fast Delivery</h3>
+
+            <p>Quick delivery at your doorstep.</p>
+
+        </div>
+
+        <div class="feature-box">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>Secure Payment</h3>
+
+            <p>100% secure payment methods.</p>
+
+        </div>
+
+        <div class="feature-box">
+
+            <i class="fa-solid fa-headset"></i>
+
+            <h3>24/7 Support</h3>
+
+            <p>Customer support anytime.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="aboutSection" class="next-section">
+
+    <h2 class="section-title">
+
+        About Us
+
+    </h2>
+
+    <div class="about-container">
+
+        <div class="about-image">
+
+            <img src="images/banner2.jpeg" alt="">
+
+        </div>
+
+        <div class="about-content">
+
+            <h3>Welcome To ShopEase</h3>
+
+            <p>
+                ShopEase is a premium e-commerce website providing
+                stylish products, electronics, fashion accessories,
+                and secure online shopping experiences.
+            </p>
+
+            <button onclick="showSection('reviewSection')">
+
+                Read Reviews
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section id="reviewSection" class="next-section">
+
+    <h2 class="section-title">
+
+        Customer Reviews
+
+    </h2>
+
+    <div class="review-container">
+
+        <div class="review-card">
+
+            
+            <h3>Sarah</h3>
+
+            <p>
+                Amazing website design and fast delivery service.
+            </p>
+
+        </div>
+
+        <div class="review-card">
+
+            
+
+            <h3>David</h3>
+
+            <p>
+                Premium quality products and secure payment.
+            </p>
+
+        </div>
+
+        <div class="review-card">
+
+            
+
+            <h3>Emma</h3>
+
+            <p>
+                Best online shopping experience ever.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CHECKOUT -->
+
+<section id="checkoutSection" class="next-section">
+
+    <h2 class="section-title">
+
+        Checkout Page
+
+    </h2>
+
+    <form>
+
+        <input type="text"
+        placeholder="Enter Your Name">
+
+        <input type="email"
+        placeholder="Enter Your Email">
+
+        <input type="text"
+        placeholder="Shipping Address">
+
+        <button type="submit">
+
+            Place Order
+
+        </button>
+
+    </form>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contactSection" class="next-section">
+
+    <h2 class="section-title">
+
+        Contact Us
+
+    </h2>
+
+    <form id="contactForm">
+
+        <input type="text"
+        id="name"
+        placeholder="Enter Your Name">
+
+        <input type="email"
+        id="email"
+        placeholder="Enter Your Email">
+
+        <textarea id="message"
+        placeholder="Enter Your Message"></textarea>
+
+        <button type="submit">
+
+            Send Message
+
+        </button>
+
+    </form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 ShopEase. All Rights Reserved.
+    </p>
+
+</footer>
+
+<!-- TOP BUTTON -->
+
+<button id="topBtn">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<script>
+
+/* SHOW HERO OPTIONS */
+
+function showOptions(){
+
+    let box = document.getElementById("optionsBox");
+
+    if(box.style.display === "block"){
+
+        box.style.display = "none";
+
+    }
+    else{
+
+        box.style.display = "block";
+    }
+
+}
+
+/* SHOW NEXT SECTION */
+
+function showSection(sectionId){
+
+    document.getElementById(sectionId)
+    .style.display = "block";
+
+    document.getElementById(sectionId)
+    .scrollIntoView({
+
+        behavior:'smooth'
+    });
+
+}
+
+/* CONTACT FORM */
+
+let form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+
+    let email = document.getElementById("email").value;
+
+    let message = document.getElementById("message").value;
+
+    if(name === "" || email === "" || message === ""){
+
+        alert("Please fill all fields");
+
+    }
+    else{
+
+        alert("Message Sent Successfully!");
+
+        form.reset();
+    }
+
+});
+
+/* SCROLL BUTTON */
+
+let topBtn = document.getElementById("topBtn");
+
+window.onscroll = function(){
+
+    if(document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200){
+
+        topBtn.style.display = "block";
+    }
+    else{
+
+        topBtn.style.display = "none";
+    }
+
+};
+
+topBtn.addEventListener("click", function(){
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
